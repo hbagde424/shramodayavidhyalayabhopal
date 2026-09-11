@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS admins (
 -- Default admin -> username: admin  password: admin123
 -- (password is hashed with PHP password_hash - bcrypt)
 INSERT INTO admins (username, password, full_name) VALUES
-('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.YePwOSSF/nA0IHyG3RhAAF3sM/K3bkl/6', 'Site Administrator');
+('admin', '$2y$10$0m/POvbNw.CapUW4.YxA9eyV2iTy1fZEj7p44qF37KrYLYdHzvptO', 'Site Administrator');
 -- NOTE: hash above corresponds to password "admin123"
 
 -- ---------------------------------------------------------
