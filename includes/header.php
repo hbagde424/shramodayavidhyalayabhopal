@@ -30,7 +30,14 @@
       <button class="accessibility-btn" onclick="document.body.style.fontSize='100%'">A</button>
       <button class="accessibility-btn" onclick="document.body.style.fontSize='110%'">A+</button>
       <span class="text-white-50 ms-1 me-1">|</span>
-      <span class="badge bg-warning text-dark me-2">हिंदी</span>
+      <!-- Google Translate Widget -->
+      <div id="google_translate_element" class="d-inline-block me-2"></div>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'hi', includedLanguages: 'hi,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+      </script>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       <a href="<?php echo SITE_URL; ?>/admin/login.php" class="accessibility-btn bg-success border-0"><i class="bi bi-person-lock"></i> स्टाफ लॉगिन</a>
     </div>
   </div>

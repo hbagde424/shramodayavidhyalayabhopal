@@ -11,9 +11,19 @@ define('DB_PASS', '');
 define('DB_NAME', 'school_db');
 
 // Site base settings (edit for your school)
-define('SITE_NAME', 'सर्वोदय आवासीय विद्यालय');
+define('SITE_NAME', 'श्रमोदय आवासीय विद्यालय भोपाल');
 define('SITE_TAGLINE', 'गुणवत्तापूर्ण शिक्षा | सुरक्षित परिसर | उज्जवल भविष्य');
-define('SITE_URL', 'http://localhost/school_website');
+// Dynamic SITE_URL (handles HTTP/HTTPS & Localhost/Live automatically)
+$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')) ? "https" : "http";
+$host = $_SERVER['HTTP_HOST'];
+$dir = dirname($_SERVER['SCRIPT_NAME']);
+$dir = str_replace('\\', '/', $dir); // Windows compatibility
+if ($dir === '/') { $dir = ''; }
+
+// If we are in admin folder or includes folder, we need to strip that from the path
+$dir = preg_replace('#/(admin|includes)$#', '', $dir);
+
+define('SITE_URL', $protocol . '://' . $host . $dir);
 
 // Start session everywhere
 if (session_status() === PHP_SESSION_NONE) {

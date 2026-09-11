@@ -101,7 +101,7 @@ $gallery = mysqli_query($conn, "SELECT * FROM gallery ORDER BY created_at DESC L
           </div>
           <div class="dignitary-name">डॉ. आर. के. शर्मा</div>
           <div class="dignitary-role">प्राचार्य एवं प्रशासक</div>
-          <span class="dignitary-badge">सर्वोदय विद्यालय</span>
+          <span class="dignitary-badge">श्रमोदय विद्यालय</span>
         </div>
       </div>
 
