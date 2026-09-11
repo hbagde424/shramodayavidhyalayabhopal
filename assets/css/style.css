@@ -1,0 +1,449 @@
+/* =========================================================
+   SARVODAYA AWASIYA VIDYALAYA - Main Stylesheet
+   Theme: Deep Green + Saffron (distinct from reference site)
+   ========================================================= */
+
+:root{
+  --primary: #0B3C5D;      /* official govt royal navy blue */
+  --primary-light: #1D5073;
+  --govt-green: #14532d;   /* deep forest green */
+  --accent: #f77f00;       /* saffron accent */
+  --gold: #d4af37;         /* official seal gold */
+  --light-bg: #f8fafc;
+  --dark-text: #1e293b;
+}
+
+body{
+  font-family: 'Noto Sans Devanagari', 'Segoe UI', sans-serif;
+  color: var(--dark-text);
+  background: var(--light-bg);
+}
+
+/* Indian Tricolor Ribbon */
+.tricolor-bar {
+  height: 4px;
+  background: linear-gradient(to right, #FF9933 0%, #FF9933 33.3%, #FFFFFF 33.3%, #FFFFFF 66.6%, #138808 66.6%, #138808 100%);
+}
+
+/* Top strip */
+.top-strip{
+  background: #061c2d;
+  color: #fff;
+  padding: 6px 0;
+  font-size: 0.82rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.accessibility-btn {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.accessibility-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Header */
+.site-header{
+  background: #ffffff;
+  border-bottom: 3px solid var(--accent);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.gov-emblem-img {
+  height: 62px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
+}
+.gov-header-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+.gov-header-logo:hover {
+  transform: scale(1.05);
+}
+.school-title{
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.65rem;
+  letter-spacing: -0.3px;
+}
+.school-sub{
+  color: var(--govt-green);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+.school-dept {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Navigation */
+.main-nav{
+  background: var(--primary);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.main-nav .nav-link{
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.1rem !important;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.main-nav .nav-link:hover, .main-nav .nav-link.active{
+  background: var(--accent);
+  color: #fff !important;
+}
+
+/* Hero / Banner */
+.hero-banner{
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: #fff;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-banner h2{
+  font-weight: 700;
+  font-size: 2rem;
+}
+.hero-banner .btn-accent{
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 28px;
+  border-radius: 30px;
+}
+.hero-banner .btn-accent:hover{
+  background: #d76a00;
+  color:#fff;
+}
+
+/* Marquee notice bar */
+.notice-bar{
+  background: #fff3e0;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.notice-bar .badge-new{
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+marquee, .marquee-text{
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Section titles */
+.section-title{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.section-title h3{
+  color: var(--primary);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+.section-title h3::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Cards */
+.info-card{
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  height: 100%;
+  transition: transform 0.2s ease;
+  border-top: 4px solid var(--primary);
+}
+.info-card:hover{
+  transform: translateY(-5px);
+}
+.info-card i{
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.news-card, .event-card{
+  background:#fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  height:100%;
+}
+.news-card img, .event-card img{
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+.news-card .card-body, .event-card .card-body{
+  padding: 15px;
+}
+.date-chip{
+  background: var(--primary);
+  color:#fff;
+  font-size:0.75rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  display:inline-block;
+  margin-bottom:8px;
+}
+
+/* Facility list */
+.facility-list li{
+  padding: 10px 0;
+  border-bottom: 1px dashed #ddd;
+}
+.facility-list li:last-child{ border-bottom:none; }
+.facility-list i{ color: var(--primary); margin-right:8px; }
+
+/* Gallery */
+.gallery-thumb{
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.gallery-thumb img{
+  width:100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.gallery-thumb:hover img{
+  transform: scale(1.08);
+}
+
+/* Footer */
+.site-footer{
+  background: #0d3a20;
+  color: #fff;
+}
+.site-footer h5{
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.footer-links li{ margin-bottom: 8px; }
+.footer-links a{
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+}
+.footer-links a:hover{ color: var(--accent); }
+.social-icon{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+}
+.social-icon:hover{ background: var(--accent); }
+
+/* Admin panel */
+.admin-sidebar{
+  background: var(--primary);
+  min-height: 100vh;
+  color:#fff;
+}
+.admin-sidebar a{
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  display:block;
+  padding: 12px 20px;
+  border-left: 4px solid transparent;
+}
+.admin-sidebar a:hover, .admin-sidebar a.active{
+  background: rgba(255,255,255,0.1);
+  border-left-color: var(--accent);
+  color:#fff;
+}
+.admin-topbar{
+  background:#fff;
+  border-bottom: 1px solid #eee;
+  padding: 12px 20px;
+}
+.login-box{
+  max-width: 420px;
+  margin: 80px auto;
+  background:#fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* =========================================================
+   GOVERNMENT PORTAL SPECIFIC EXTENSIONS
+   ========================================================= */
+
+/* Dignitaries / Leadership Cards Section */
+.dignitary-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  padding: 20px 15px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.dignitary-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--accent), var(--gold));
+}
+.dignitary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(11, 60, 93, 0.12);
+  border-color: var(--gold);
+}
+.dignitary-img-wrapper {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--gold), var(--primary));
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+.dignitary-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #f1f5f9;
+}
+.dignitary-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 3px;
+}
+.dignitary-role {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.dignitary-badge {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid #cbd5e1;
+}
+
+/* Initiatives Strip */
+.initiatives-section {
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 25px 0;
+  margin: 40px 0;
+}
+.initiative-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+.initiative-box:hover {
+  background: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.initiative-img {
+  height: 42px;
+  width: auto;
+  max-width: 70px;
+  object-fit: contain;
+}
+.initiative-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+.initiative-desc {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Official Government Stamps & Badges */
+.gov-seal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(11, 60, 93, 0.06);
+  border: 1px solid rgba(11, 60, 93, 0.15);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.gov-seal-badge img {
+  height: 22px;
+  width: auto;
+}
+
+/* Government Footer Extras */
+.gov-footer-badge {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 12px 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+.gov-footer-badge img {
+  height: 38px;
+  margin-bottom: 6px;
+  filter: brightness(0) invert(1) opacity(0.85);
+}
+
