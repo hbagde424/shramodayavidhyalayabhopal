@@ -5,6 +5,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php echo isset($page_title) ? h($page_title) . ' - ' . SITE_NAME : SITE_NAME; ?></title>
+
+<!-- ================= SEO Meta Tags ================= -->
+<meta name="description" content="<?php echo isset($meta_desc) ? h($meta_desc) : 'श्रमोदय आवासीय विद्यालय भोपाल (Shramodaya Vidyalaya Bhopal) - मध्य प्रदेश शासन श्रम विभाग द्वारा पंजीकृत निर्माण श्रमिकों के बच्चों के लिए निःशुल्क गुणवत्तापूर्ण आवासीय शिक्षा।'; ?>">
+<meta name="keywords" content="<?php echo isset($meta_keywords) ? h($meta_keywords) : 'Shramodaya Vidyalaya Bhopal, श्रमोदय आवासीय विद्यालय, MP Govt School, Shramodaya Residential School, Bhopal Best School, Free Education MP'; ?>">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Shramodaya Vidyalaya IT Cell">
+<link rel="canonical" href="<?php echo SITE_URL . strtok($_SERVER["REQUEST_URI"], '?'); ?>">
+
+<!-- Open Graph / Social Media SEO (Facebook, WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="<?php echo isset($page_title) ? h($page_title) . ' - ' . SITE_NAME : SITE_NAME; ?>">
+<meta property="og:description" content="<?php echo isset($meta_desc) ? h($meta_desc) : 'श्रमोदय आवासीय विद्यालय भोपाल - गुणवत्तापूर्ण आवासीय शिक्षा।'; ?>">
+<meta property="og:image" content="<?php echo SITE_URL; ?>/assets/images/school_campus.png">
+<meta property="og:url" content="<?php echo SITE_URL . strtok($_SERVER["REQUEST_URI"], '?'); ?>">
+<!-- ================================================= -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
